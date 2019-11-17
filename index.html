@@ -3,8 +3,14 @@
 <body>
 <script>
 	const color = window.location.href.split('/').reverse()[0];
-	document.getElementsByTagName("BODY")[0].style.background = color;
-  document.title = `color:${color}`;
+	const bodyEle = document.getElementsByTagName("BODY")[0];
+	const h1Ele = document.getElementsByTagName("h1")[0];
+	
+	bodyEle.style.background = color;
+  	document.title = `color:${color}`;
+	h1Ele.innerHTML = color;
+	h1Ele.style.color = 'white';
 </script>
+	<h1></h1>
 </body>
 </html>
